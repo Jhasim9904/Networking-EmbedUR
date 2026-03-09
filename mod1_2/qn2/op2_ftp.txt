@@ -1,0 +1,38 @@
+jhasim@EURLTP-371:~$ ftp localhost
+Connected to localhost.
+220 (vsFTPd 3.0.5)
+Name (localhost:jhasim): jhasim
+331 Please specify the password.
+Password:
+230 Login successful.
+Remote system type is UNIX.
+Using binary mode to transfer files.
+ftp> ls
+200 PORT command successful. Consider using PASV.
+150 Here comes the directory listing.
+drwxr-xr-x    3 1000     1000         4096 Mar 05 08:33 Networking
+226 Directory send OK.
+ftp> cd Networking/mod1_2/
+250 Directory successfully changed.
+ftp> ls
+200 PORT command successful. Consider using PASV.
+150 Here comes the directory listing.
+drwxr-xr-x    3 1000     1000         4096 Mar 05 08:56 qn1
+drwxr-xr-x    2 1000     1000         4096 Mar 05 08:57 qn2
+226 Directory send OK.
+ftp> cd qn1
+250 Directory successfully changed.
+ftp> ls
+200 PORT command successful. Consider using PASV.
+150 Here comes the directory listing.
+-rw-r--r--    1 1000     1000          717 Mar 05 08:56 op1.txt
+drwxr-xr-x    2 1000     1000         4096 Mar 05 08:49 source
+226 Directory send OK.
+ftp> get op1.txt
+200 PORT command successful. Consider using PASV.
+150 Opening BINARY mode data connection for op1.txt (717 bytes).
+226 Transfer complete.
+717 bytes received in 0.000153 seconds (4.47 Mbytes/s)
+ftp> bye
+221 Goodbye.
+jhasim@EURLTP-371:~$

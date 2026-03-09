@@ -1,0 +1,11 @@
+jhasim@EURLTP-371:~/Networking/mod1_2/qn1$ cd source
+jhasim@EURLTP-371:~/Networking/mod1_2/qn1/source$ ls
+file1.txt  file2.txt  file3.txt
+jhasim@EURLTP-371:~/Networking/mod1_2/qn1/source$ cd
+jhasim@EURLTP-371:~$ scp -r Networking/mod1_2/qn1/source/ jhasim@localhost:/tmp/
+jhasim@localhost's password:
+file1.txt                                                                             100%   13    19.8KB/s   00:00
+file3.txt                                                                             100%    0     0.0KB/s   00:00
+file2.txt                                                                             100%    0     0.0KB/s   00:00
+jhasim@EURLTP-371:~$ ls /tmp/source
+file1.txt  file2.txt  file3.txt
