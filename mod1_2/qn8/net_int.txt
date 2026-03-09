@@ -1,0 +1,28 @@
+Every device connected to a network has a network interface.
+
+Examples:
+
+WiFi adapter
+
+Ethernet port
+
+Virtual interfaces (WSL / VM)
+
+Linux allows us to inspect these interfaces using commands like:
+
+ifconfig
+
+iwconfig
+
+ip a (modern replacement)
+
+These commands show important network parameters such as:
+
+Parameter	Meaning
+IP Address	Address assigned to device
+Netmask	Defines network range
+Broadcast	Address to send packets to all devices
+MTU	Maximum packet size
+MAC Address	Hardware address
+TX/RX packets	Data sent and received
+Interface speed	Speed of connection

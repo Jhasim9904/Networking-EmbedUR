@@ -1,0 +1,63 @@
+jhasim@EURLTP-371:~/Networking/mod1_2/qn4$ ping google.com
+PING google.com (142.250.191.78) 56(84) bytes of data.
+64 bytes from nuq04s43-in-f14.1e100.net (142.250.191.78): icmp_seq=1 ttl=114 time=266 ms
+64 bytes from nuq04s43-in-f14.1e100.net (142.250.191.78): icmp_seq=2 ttl=114 time=268 ms
+64 bytes from nuq04s43-in-f14.1e100.net (142.250.191.78): icmp_seq=3 ttl=114 time=523 ms
+64 bytes from nuq04s43-in-f14.1e100.net (142.250.191.78): icmp_seq=4 ttl=114 time=241 ms
+64 bytes from nuq04s43-in-f14.1e100.net (142.250.191.78): icmp_seq=5 ttl=114 time=296 ms
+64 bytes from nuq04s43-in-f14.1e100.net (142.250.191.78): icmp_seq=6 ttl=114 time=214 ms
+64 bytes from nuq04s43-in-f14.1e100.net (142.250.191.78): icmp_seq=7 ttl=114 time=228 ms
+64 bytes from nuq04s43-in-f14.1e100.net (142.250.191.78): icmp_seq=8 ttl=114 time=254 ms
+64 bytes from nuq04s43-in-f14.1e100.net (142.250.191.78): icmp_seq=9 ttl=114 time=330 ms
+64 bytes from nuq04s43-in-f14.1e100.net (142.250.191.78): icmp_seq=10 ttl=114 time=233 ms
+64 bytes from nuq04s43-in-f14.1e100.net (142.250.191.78): icmp_seq=11 ttl=114 time=205 ms
+64 bytes from nuq04s43-in-f14.1e100.net (142.250.191.78): icmp_seq=12 ttl=114 time=204 ms
+64 bytes from nuq04s43-in-f14.1e100.net (142.250.191.78): icmp_seq=13 ttl=114 time=214 ms
+64 bytes from nuq04s43-in-f14.1e100.net (142.250.191.78): icmp_seq=14 ttl=114 time=207 ms
+^C
+--- google.com ping statistics ---
+15 packets transmitted, 14 received, 6.66667% packet loss, time 14025ms
+rtt min/avg/max/mdev = 204.173/263.075/522.921/80.385 ms
+jhasim@EURLTP-371:~/Networking/mod1_2/qn4$ arp -a
+Command 'arp' not found, but can be installed with:
+sudo apt install net-tools
+jhasim@EURLTP-371:~/Networking/mod1_2/qn4$ sudo apt install net-tools
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following packages were automatically installed and are no longer required:
+  libdrm-nouveau2 libdrm-radeon1 libgl1-amber-dri libglapi-mesa libllvm17t64 libxcb-dri2-0
+Use 'sudo apt autoremove' to remove them.
+The following NEW packages will be installed:
+  net-tools
+0 upgraded, 1 newly installed, 0 to remove and 2 not upgraded.
+Need to get 204 kB of archives.
+After this operation, 811 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 net-tools amd64 2.10-0.1ubuntu4.4 [204 kB]
+Fetched 204 kB in 2s (120 kB/s)
+Selecting previously unselected package net-tools.
+(Reading database ... 51698 files and directories currently installed.)
+Preparing to unpack .../net-tools_2.10-0.1ubuntu4.4_amd64.deb ...
+Unpacking net-tools (2.10-0.1ubuntu4.4) ...
+Setting up net-tools (2.10-0.1ubuntu4.4) ...
+Processing triggers for man-db (2.12.0-4build2) ...
+jhasim@EURLTP-371:~/Networking/mod1_2/qn4$ arp -a
+EURLTP-371.mshome.net (172.21.128.1) at 00:15:5d:3d:59:24 [ether] on eth0
+jhasim@EURLTP-371:~/Networking/mod1_2/qn4$ ifconfig
+eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 172.21.129.133  netmask 255.255.240.0  broadcast 172.21.143.255
+        inet6 fe80::215:5dff:fe7e:8b04  prefixlen 64  scopeid 0x20<link>
+        ether 00:15:5d:7e:8b:04  txqueuelen 1000  (Ethernet)
+        RX packets 1772  bytes 1993438 (1.9 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 449  bytes 40861 (40.8 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 54  bytes 5517 (5.5 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 54  bytes 5517 (5.5 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0

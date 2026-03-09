@@ -1,0 +1,75 @@
+Every home network has a router.
+
+The router:
+
+connects devices to internet
+
+assigns IP addresses (via DHCP)
+
+manages WiFi
+
+Common router IP addresses:
+
+192.168.1.1
+192.168.0.1
+192.168.31.1
+
+You can open router settings through a web browser.
+
+Step 1 — Find Your Router IP
+
+In Ubuntu run:
+
+ip route
+
+Example output:
+
+default via 192.168.1.1 dev eth0
+
+Here:
+
+192.168.1.1 = Router IP
+
+This is called the Default Gateway.
+
+Step 2 — Open Router Web Interface
+
+Open your browser.
+
+Type:
+
+http://192.168.1.1
+
+or
+
+http://192.168.0.1
+
+Router login page appears.
+
+Example:
+
+TP-Link
+D-Link
+Netgear
+Jio Fiber
+Airtel Router
+Step 3 — Login
+
+Common default credentials:
+
+Username	Password
+admin	admin
+admin	password
+
+If changed, check router sticker.
+
+Step 4 — Find Connected Devices
+
+Inside router dashboard go to:
+
+Possible sections:
+
+Connected Devices
+DHCP Clients
+LAN Devices
+Device List

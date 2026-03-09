@@ -1,0 +1,36 @@
+In a network, every device needs an IP address to communicate.
+
+Instead of manually configuring IP on every device, networks use a DHCP server.
+
+DHCP automatically assigns:
+
+IP address
+
+Subnet mask
+
+Default gateway
+
+DNS server
+
+The protocol used is Dynamic Host Configuration Protocol (DHCP).
+
+Client → DHCP DISCOVER → Broadcast
+
+Server → DHCP OFFER → Available IP
+
+Client → DHCP REQUEST → Accept IP
+
+Server → DHCP ACK → IP assigned
+This is called DORA process.
+
+ipconfig /all
+DHCP Enabled : Yes
+IPv4 Address : 192.168.1.15
+Default Gateway : 192.168.1.1
+DHCP Server : 192.168.1.1
+
+Without DHCP:
+
+every device must be manually configured
+
+huge networks become impossible to manage

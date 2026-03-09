@@ -1,0 +1,108 @@
+jhasim@EURLTP-371:~$ sudo service ssh start
+[sudo] password for jhasim:
+Sorry, try again.
+[sudo] password for jhasim:
+jhasim@EURLTP-371:~$ sudo service ssh status
+● ssh.service - OpenBSD Secure Shell server
+     Loaded: loaded (/usr/lib/systemd/system/ssh.service; disabled; preset: enabled)
+     Active: active (running) since Mon 2026-03-09 07:07:58 UTC; 4s ago
+TriggeredBy: ● ssh.socket
+       Docs: man:sshd(8)
+             man:sshd_config(5)
+    Process: 2265 ExecStartPre=/usr/sbin/sshd -t (code=exited, status=0/SUCCESS)
+   Main PID: 2266 (sshd)
+      Tasks: 1 (limit: 9350)
+     Memory: 2.7M ()
+     CGroup: /system.slice/ssh.service
+             └─2266 "sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups"
+
+Mar 09 07:07:58 EURLTP-371 systemd[1]: Starting ssh.service - OpenBSD Secure Shell server...
+Mar 09 07:07:58 EURLTP-371 sshd[2266]: Server listening on 0.0.0.0 port 22.
+Mar 09 07:07:58 EURLTP-371 sshd[2266]: Server listening on :: port 22.
+Mar 09 07:07:58 EURLTP-371 systemd[1]: Started ssh.service - OpenBSD Secure Shell server.
+jhasim@EURLTP-371:~$ ip a
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet 10.255.255.254/32 brd 10.255.255.254 scope global lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
+    link/ether 00:15:5d:7e:8b:04 brd ff:ff:ff:ff:ff:ff
+    inet 172.21.129.133/20 brd 172.21.143.255 scope global eth0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::215:5dff:fe7e:8b04/64 scope link
+       valid_lft forever preferred_lft forever
+jhasim@EURLTP-371:~$ hostname -I
+172.21.129.133
+jhasim@EURLTP-371:~$ ssh jhasim@localhost
+jhasim@localhost's password:
+Welcome to Ubuntu 24.04.4 LTS (GNU/Linux 5.15.153.1-microsoft-standard-WSL2 x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Mon Mar  9 07:10:19 UTC 2026
+
+  System load:  0.08                Processes:             32
+  Usage of /:   0.2% of 1006.85GB   Users logged in:       1
+  Memory usage: 4%                  IPv4 address for eth0: 172.21.129.133
+  Swap usage:   0%
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+jhasim@EURLTP-371:~$ who
+jhasim   pts/1        2026-03-09 04:44
+jhasim   pts/2        2026-03-09 07:10 (127.0.0.1)
+jhasim@EURLTP-371:~$ w
+ 07:11:09 up  2:26,  2 users,  load average: 0.07, 0.03, 0.01
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU  WHAT
+jhasim            127.0.0.1        07:10    2:26m  0.00s  0.05s sshd: jhasim [priv]
+jhasim   pts/1    -                04:44    2:26m  0.04s  0.03s -bash
+jhasim@EURLTP-371:~$ exit
+logout
+Connection to localhost closed.
+jhasim@EURLTP-371:~$ w
+ 07:11:24 up  2:26,  1 user,  load average: 0.06, 0.03, 0.00
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU  WHAT
+jhasim   pts/1    -                04:44    2:26m  0.04s  0.03s -bash
+jhasim@EURLTP-371:~$
+jhasim@EURLTP-371:~$
+jhasim@EURLTP-371:~$ sudo apt install telnet
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following packages were automatically installed and are no longer required:
+  libdrm-nouveau2 libdrm-radeon1 libgl1-amber-dri libglapi-mesa libllvm17t64 libxcb-dri2-0
+Use 'sudo apt autoremove' to remove them.
+The following additional packages will be installed:
+  inetutils-telnet
+The following NEW packages will be installed:
+  inetutils-telnet telnet
+0 upgraded, 2 newly installed, 0 to remove and 2 not upgraded.
+Need to get 104 kB of archives.
+After this operation, 295 kB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 inetutils-telnet amd64 2:2.5-3ubuntu4.1 [100.0 kB]
+Get:2 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 telnet all 0.17+2.5-3ubuntu4.1 [3688 B]
+Fetched 104 kB in 2s (58.8 kB/s)
+Selecting previously unselected package inetutils-telnet.
+(Reading database ... 51803 files and directories currently installed.)
+Preparing to unpack .../inetutils-telnet_2%3a2.5-3ubuntu4.1_amd64.deb ...
+Unpacking inetutils-telnet (2:2.5-3ubuntu4.1) ...
+Selecting previously unselected package telnet.
+Preparing to unpack .../telnet_0.17+2.5-3ubuntu4.1_all.deb ...
+Unpacking telnet (0.17+2.5-3ubuntu4.1) ...
+Setting up inetutils-telnet (2:2.5-3ubuntu4.1) ...
+update-alternatives: using /usr/bin/inetutils-telnet to provide /usr/bin/telnet (telnet) in auto mode
+Setting up telnet (0.17+2.5-3ubuntu4.1) ...
+Processing triggers for man-db (2.12.0-4build2) ...
+jhasim@EURLTP-371:~$ telnet towel.blinkenlights.nl
+Trying 213.136.8.188...
+^C
+jhasim@EURLTP-371:~$

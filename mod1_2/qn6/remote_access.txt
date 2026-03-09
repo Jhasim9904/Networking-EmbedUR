@@ -1,0 +1,58 @@
+Access remote system using VNC, AnyDesk, TeamViewer, Remote Desktop
+This teaches remote access technology.
+
+Remote access allows you to control another computer over the network.
+
+Example:
+
+Your Laptop → Control → Office Computer
+
+You can:
+
+See the screen
+
+Move mouse
+
+Run programs
+
+Transfer files
+
+2. Common remote access tools
+
+Your assignment mentions these:
+
+Tool	Purpose
+VNC Viewer	remote desktop protocol
+AnyDesk	fast remote access
+TeamViewer	widely used support tool
+Microsoft Remote Desktop	built-in Windows RDP client
+
+All these tools do the same thing:
+
+Remote system screen → transmitted over network
+
+3. How remote desktop works internally
+
+The remote computer runs a server.
+
+Your computer runs a client.
+
+Communication happens through:
+
+TCP/IP
+
+Screen capture
+
+Keyboard/mouse events
+
+Example flow:
+
+Client PC
+   ↓
+Remote Desktop Client
+   ↓
+Internet / LAN
+   ↓
+Remote Desktop Server
+   ↓
+Remote Computer

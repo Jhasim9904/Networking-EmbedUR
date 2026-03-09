@@ -1,0 +1,31 @@
+A default gateway is the router that connects your local network to other networks.
+Connects local network to internet
+
+Usually your router
+
+Packets outside network are sent to gateway
+
+jhasim@EURLTP-371:~/Networking/mod1_2/qn7$ ip route
+default via 172.21.128.1 dev eth0 proto kernel
+172.21.128.0/20 dev eth0 proto kernel scope link src 172.21.129.133
+jhasim@EURLTP-371:~/Networking/mod1_2/qn7$ ping 8.8.8.8
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=118 time=6.65 ms
+64 bytes from 8.8.8.8: icmp_seq=2 ttl=118 time=5.96 ms
+64 bytes from 8.8.8.8: icmp_seq=3 ttl=118 time=11.2 ms
+64 bytes from 8.8.8.8: icmp_seq=4 ttl=118 time=22.1 ms
+64 bytes from 8.8.8.8: icmp_seq=5 ttl=118 time=13.9 ms
+^C
+--- 8.8.8.8 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4008ms
+rtt min/avg/max/mdev = 5.962/11.957/22.129/5.863 ms
+jhasim@EURLTP-371:~/Networking/mod1_2/qn7$ ip route show
+default via 172.21.128.1 dev eth0 proto kernel
+172.21.128.0/20 dev eth0 proto kernel scope link src 172.21.129.133
+jhasim@EURLTP-371:~/Networking/mod1_2/qn7$ route-n
+route-n: command not found
+jhasim@EURLTP-371:~/Networking/mod1_2/qn7$ route -n
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+0.0.0.0         172.21.128.1    0.0.0.0         UG    0      0        0 eth0
+172.21.128.0    0.0.0.0         255.255.240.0   U     0      0        0 eth0
