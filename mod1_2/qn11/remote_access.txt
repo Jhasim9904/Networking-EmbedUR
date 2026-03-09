@@ -106,3 +106,20 @@ jhasim@EURLTP-371:~$ telnet towel.blinkenlights.nl
 Trying 213.136.8.188...
 ^C
 jhasim@EURLTP-371:~$
+
+
+SSH is a secure protocol used to remotely access systems over a network. It uses port 22 and encrypts communication between client and server.
+
+I installed the SSH server in Ubuntu using:
+
+sudo apt install openssh-server
+
+Then started the SSH service:
+
+sudo service ssh start
+
+I tested SSH by connecting to my system using:
+
+ssh jhasim@localhost
+
+After entering the password, a remote shell session was established successfully.
