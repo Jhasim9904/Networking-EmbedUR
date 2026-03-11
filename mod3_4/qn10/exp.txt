@@ -1,0 +1,38 @@
+Viewing MAC Address Table in Linux
+
+A network switch maintains a MAC address table that 
+maps device MAC addresses to the switch ports they 
+are connected to. This allows the switch to forward 
+Ethernet frames only to the correct destination 
+instead of broadcasting to all ports.
+
+Linux systems can also perform switching operations 
+using a software bridge. The Linux kernel maintains a 
+forwarding database (FDB) that stores MAC address 
+mappings for connected interfaces.
+
+The ip link command is used to view network 
+interfaces and their MAC addresses. For example:
+
+ip link show
+
+The MAC address table in a Linux bridge can be viewed 
+using the bridge fdb show command. This command 
+displays the learned MAC addresses and the associated 
+network interfaces.
+
+Example:
+
+bridge fdb show
+
+This output shows the MAC address entries that Linux 
+has learned while forwarding Ethernet frames between 
+interfaces. This mechanism is similar to how a 
+physical network switch maintains and uses a MAC 
+address table for frame forwarding.
+
+Linux software bridges are commonly used in 
+virtualization environments such as Docker, 
+VirtualBox, and cloud networking where the operating 
+system acts as a virtual switch between multiple 
+network interfaces.

@@ -1,0 +1,29 @@
+Configuring a LAN Interface using the ip Command
+
+In Linux, the ip command from the iproute2 package is 
+used to configure network interfaces. To configure a 
+basic LAN interface, the system administrator first 
+identifies available network interfaces using the ip 
+link show command. Once the interface (such as eth0) 
+is identified, an IP address can be assigned using 
+the command ip addr add.
+
+For example:
+
+sudo ip addr add 192.168.1.10/24 dev eth0
+
+This assigns the IP address 192.168.1.10 with a 
+subnet mask of 255.255.255.0 to the interface. The 
+interface is then activated using:
+
+sudo ip link set eth0 up
+
+After configuration, the settings can be verified 
+using:
+
+ip addr show eth0
+
+This allows the system to communicate with other 
+devices in the same LAN network. The ip command 
+provides a modern and powerful way to configure 
+networking in Linux systems.
