@@ -1,0 +1,11 @@
+ARP spoofing is a network attack in which an attacker sends falsified ARP replies to associate their MAC address with the IP 
+address of another device, usually the default gateway. This causes traffic intended for the gateway to be redirected to the 
+attacker.
+
+In this experiment, a network was simulated using Cisco Packet Tracer with two PCs and a router connected through a switch. 
+One PC acted as the victim while another represented the attacker. The victim initially communicated with the router normally 
+and the ARP table showed the correct MAC address of the router.
+
+During the spoofing process, the attacker sends a malicious ARP reply claiming that the router’s IP address corresponds to 
+the attacker’s MAC address. As a result, the victim updates its ARP table and sends traffic to the attacker instead of the 
+router. This demonstrates how ARP spoofing can enable a man-in-the-middle attack.
