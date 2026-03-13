@@ -1,0 +1,10 @@
+Address Resolution Protocol (ARP) is used to map IP addresses to MAC addresses in a local network. When a device wants to 
+communicate with another device in the same network, it first sends an ARP request to discover the destination MAC address.
+
+Using Wireshark, ARP packets were captured while performing a ping operation between two devices. The ARP request packet was 
+broadcast to all devices in the network asking for the MAC address associated with a specific IP address. The destination 
+device responded with an ARP reply containing its MAC address.
+
+The ARP request contained the sender's IP and MAC address along with the target IP address whose MAC address was unknown. The 
+ARP reply included the MAC address corresponding to the requested IP address. This process allows devices to build an ARP 
+table and communicate using Ethernet frames.
