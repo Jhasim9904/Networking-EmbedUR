@@ -1,0 +1,15 @@
+Network Address Translation (NAT) was configured on a router to enable communication between a private internal network and 
+an external network. The topology consisted of two PCs connected to a switch (LAN), which in turn connected to a router, and 
+an external PC representing the Internet. The internal network used private IP addresses (192.168.1.x), while the external 
+network used public IP addresses (200.1.1.x). The router interfaces were configured such that the LAN interface acted as the 
+NAT inside interface and the WAN interface acted as the NAT outside interface.
+
+An access control list (ACL) was created to identify the internal network (192.168.1.0/24), and NAT overload (Port Address 
+Translation) was enabled using the router’s external interface IP address. This allowed multiple internal devices to share a 
+single public IP address when communicating with external networks. All devices were assigned appropriate IP addresses, 
+subnet masks, and default gateways to ensure proper routing of packets.
+
+Connectivity was verified by sending ping requests from an internal PC to the external PC. The communication was successful, 
+demonstrating that NAT was functioning correctly. Using the “show ip nat translations” command on the router, it was observed 
+that the source IP address was translated from a private IP (192.168.1.x) to the router’s public IP (200.1.1.1). This 
+confirms that NAT enables private networks to access external resources while conserving public IP addresses.
