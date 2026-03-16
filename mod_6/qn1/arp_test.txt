@@ -1,0 +1,5 @@
+ARP (Address Resolution Protocol) is used to map an IP address to its corresponding MAC address within a local network. When a device needs to communicate with another network, it sends packets to its default gateway (router). Before sending, it must first determine the MAC address of the router using ARP.
+
+In this experiment, when the PC attempted to send traffic outside its network, it generated an ARP request asking for the MAC address of the router (192.168.1.1). This request was broadcast to all devices in the network. The router responded with an ARP reply containing its MAC address, allowing the PC to forward packets correctly.
+
+This demonstrates that ARP plays a critical role in packet forwarding by ensuring that Layer 3 (IP) communication can be translated into Layer 2 (MAC) delivery. Without ARP, devices would not be able to send frames within a local network.

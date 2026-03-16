@@ -1,0 +1,5 @@
+A Network Address Translation (NAT) configuration was implemented on a router to allow devices in a private network (192.168.1.x) to communicate with an external network. The router was configured with inside and outside interfaces, and NAT overload (PAT) was enabled using an access control list to identify internal IP addresses.
+
+Connectivity was tested by sending ping requests from the internal PC (192.168.1.10) to an external device (200.1.1.2). The ping was successful, confirming that the router correctly translated the private IP address into a public IP address before forwarding the packet to the external network.
+
+Using simulation mode in Cisco Packet Tracer, it was observed that before NAT translation, the source IP address was 192.168.1.10. After NAT was applied at the router, the source IP changed to 200.1.1.1. This demonstrates how NAT enables private networks to access external resources by translating private IP addresses into a public IP.

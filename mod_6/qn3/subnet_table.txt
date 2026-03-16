@@ -1,0 +1,14 @@
+| Subnet | Network    | Range                   | Broadcast  |
+| ------ | ---------- | ----------------------- | ---------- |
+| 1      | 10.0.0.0   | 10.0.0.1 – 10.0.0.62    | 10.0.0.63  |
+| 2      | 10.0.0.64  | 10.0.0.65 – 10.0.0.126  | 10.0.0.127 |
+| 3      | 10.0.0.128 | 10.0.0.129 – 10.0.0.190 | 10.0.0.191 |
+| 4      | 10.0.0.192 | 10.0.0.193 – 10.0.0.254 | 10.0.0.255 |
+
+
+
+The network 10.0.0.0/24 was divided into 4 equal subnets by borrowing 2 bits from the host portion, resulting in a new subnet mask of /26 (255.255.255.192). Each subnet contains 64 IP addresses, with 62 usable host addresses.
+
+The valid subnets are 10.0.0.0/26, 10.0.0.64/26, 10.0.0.128/26, and 10.0.0.192/26. Each subnet has its own network address, valid host range, and broadcast address.
+
+These subnets were implemented in Cisco Packet Tracer by assigning IP addresses to devices and configuring router interfaces. Connectivity between devices in the same and different subnets was successfully verified using ping, demonstrating proper subnetting and routing.

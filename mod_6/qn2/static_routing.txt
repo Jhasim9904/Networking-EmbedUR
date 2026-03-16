@@ -1,0 +1,5 @@
+Static routing was configured to enable communication between two different networks connected through routers. Initially, devices in different subnets were unable to communicate because the routers only knew about their directly connected networks.
+
+To solve this, static routes were manually configured using the ip route command on both routers. Each router was instructed on how to reach the remote network by specifying the destination network and the next-hop IP address.
+
+After configuration, connectivity was verified using ping and traceroute. The ping was successful, and traceroute showed the packet path through both routers, confirming that static routing was functioning correctly.
