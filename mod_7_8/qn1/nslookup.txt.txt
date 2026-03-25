@@ -1,0 +1,148 @@
+Microsoft Windows [Version 10.0.26200.7922]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\Veerabahu>nslookup www.google.com
+Server:  eur-dc2.embedur.local
+Address:  192.168.16.4
+
+Non-authoritative answer:
+Name:    www.google.com
+Addresses:  2001:4860:4829:7700::
+          2001:4860:4827:7700::
+          2001:4860:482a:7700::
+          2001:4860:482c:7700::
+          2001:4860:4826:7700::
+          2001:4860:482b:7700::
+          2001:4860:482d:7700::
+          2001:4860:4828:7700::
+          142.251.152.119
+          142.251.157.119
+          142.251.150.119
+          142.251.151.119
+          142.251.155.119
+          142.251.156.119
+          142.251.153.119
+          142.251.154.119
+
+
+C:\Users\Veerabahu>nslookup www.facebook.com
+Server:  eur-dc2.embedur.local
+Address:  192.168.16.4
+
+Non-authoritative answer:
+Name:    star-mini.c10r.facebook.com
+Addresses:  2a03:2880:f36e:1:face:b00c:0:25de
+          57.144.220.1
+Aliases:  www.facebook.com
+
+
+C:\Users\Veerabahu>nslookup www.amazon.com
+Server:  eur-dc2.embedur.local
+Address:  192.168.16.4
+
+Non-authoritative answer:
+Name:    cf.47cf2c8c9-frontier.amazon.com
+Addresses:  2600:9000:24bb:6c00:7:49a5:5fd6:da1
+          2600:9000:24bb:8400:7:49a5:5fd6:da1
+          2600:9000:24bb:7800:7:49a5:5fd6:da1
+          2600:9000:24bb:5000:7:49a5:5fd6:da1
+          2600:9000:24bb:dc00:7:49a5:5fd6:da1
+          2600:9000:24bb:5800:7:49a5:5fd6:da1
+          2600:9000:24bb:8000:7:49a5:5fd6:da1
+          2600:9000:24bb:f800:7:49a5:5fd6:da1
+          65.8.47.148
+Aliases:  www.amazon.com
+          tp.47cf2c8c9-frontier.amazon.com
+
+
+C:\Users\Veerabahu>nslookup www.github.com
+Server:  eur-dc2.embedur.local
+Address:  192.168.16.4
+
+Non-authoritative answer:
+Name:    github.com
+Address:  140.82.116.3
+Aliases:  www.github.com
+
+
+C:\Users\Veerabahu>nslookup www.cisco.com
+Server:  eur-dc2.embedur.local
+Address:  192.168.16.4
+
+Non-authoritative answer:
+Name:    e2867.dsca.akamaiedge.net
+Addresses:  2600:1406:2e00:981::b33
+          2600:1406:2e00:98c::b33
+          23.37.18.125
+Aliases:  www.cisco.com
+          www.cisco.com.akadns.net
+          wwwds.cisco.com.edgekey.net
+          wwwds.cisco.com.edgekey.net.globalredir.akadns.net
+
+
+C:\Users\Veerabahu>ping www.google.com
+
+Pinging www.google.com [142.251.155.119] with 32 bytes of data:
+Reply from 142.251.155.119: bytes=32 time=8ms TTL=118
+Reply from 142.251.155.119: bytes=32 time=11ms TTL=118
+Reply from 142.251.155.119: bytes=32 time=10ms TTL=118
+Reply from 142.251.155.119: bytes=32 time=9ms TTL=118
+
+Ping statistics for 142.251.155.119:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 8ms, Maximum = 11ms, Average = 9ms
+
+C:\Users\Veerabahu>ping www.facebook.com
+
+Pinging star-mini.c10r.facebook.com [57.144.220.1] with 32 bytes of data:
+Reply from 57.144.220.1: bytes=32 time=235ms TTL=51
+Reply from 57.144.220.1: bytes=32 time=216ms TTL=51
+Reply from 57.144.220.1: bytes=32 time=216ms TTL=51
+Reply from 57.144.220.1: bytes=32 time=235ms TTL=51
+
+Ping statistics for 57.144.220.1:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 216ms, Maximum = 235ms, Average = 225ms
+
+C:\Users\Veerabahu>ping www.amazon.com
+
+Pinging cf.47cf2c8c9-frontier.amazon.com [65.8.47.148] with 32 bytes of data:
+Reply from 65.8.47.148: bytes=32 time=227ms TTL=242
+Reply from 65.8.47.148: bytes=32 time=218ms TTL=242
+Reply from 65.8.47.148: bytes=32 time=212ms TTL=242
+Reply from 65.8.47.148: bytes=32 time=212ms TTL=242
+
+Ping statistics for 65.8.47.148:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 212ms, Maximum = 227ms, Average = 217ms
+
+C:\Users\Veerabahu>ping www.github.com
+
+Pinging github.com [140.82.116.3] with 32 bytes of data:
+Reply from 140.82.116.3: bytes=32 time=229ms TTL=53
+Reply from 140.82.116.3: bytes=32 time=239ms TTL=53
+Reply from 140.82.116.3: bytes=32 time=220ms TTL=53
+Reply from 140.82.116.3: bytes=32 time=227ms TTL=53
+
+Ping statistics for 140.82.116.3:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 220ms, Maximum = 239ms, Average = 228ms
+
+C:\Users\Veerabahu>ping www.cisco.com
+
+Pinging e2867.dsca.akamaiedge.net [23.37.18.125] with 32 bytes of data:
+Reply from 23.37.18.125: bytes=32 time=299ms TTL=51
+Reply from 23.37.18.125: bytes=32 time=232ms TTL=51
+Reply from 23.37.18.125: bytes=32 time=279ms TTL=51
+Reply from 23.37.18.125: bytes=32 time=250ms TTL=51
+
+Ping statistics for 23.37.18.125:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 232ms, Maximum = 299ms, Average = 265ms
+
+C:\Users\Veerabahu>
